@@ -1,114 +1,158 @@
-@import 'bootstrap/bootstrap';
-@import 'bootstrap/variables';
-@import 'bootstrap/mixins';
+$blue: #08c8e5;
+$move-dist: 35px;
+$fade-dist: -20px;
 
 
-.hoverable{
-    display:inline-block;
-    backface-visibility: hidden;
-    vertical-align: middle;
-    position:relative;
-    box-shadow: 0 0 1px rgba(0,0,0,0);
-    transition-duration: .3s;
-    transition-property:transform;
-  }
-  
-  .hoverable:before{
-    position:absolute;
-    pointer-events: none;
-    z-index:-1;
-    content: '';
-    top: 100%;
-    left: 5%;
-    height:10px;
-    width:90%;
-    opacity:0;
-    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
-    /* W3C */
-    transition-duration: 0.3s;
-    transition-property: transform, opacity;
-  }
-  
-  .hoverable:hover, .hoverable:active, .hoverable:focus{
-    transform: translateY(-5px);
-  }
-  .hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
-    opacity: 1;
-    transform: translateY(-5px);
-  }
-  
-  
-  
-  @keyframes bounce-animation {
-    16.65% {
-      -webkit-transform: translateY(8px);
-      transform: translateY(8px);
-    }
-  
-    33.3% {
-      -webkit-transform: translateY(-6px);
-      transform: translateY(-6px);
-    }
-  
-    49.95% {
-      -webkit-transform: translateY(4px);
-      transform: translateY(4px);
-    }
-  
-    66.6% {
-      -webkit-transform: translateY(-2px);
-      transform: translateY(-2px);
-    }
-  
-    83.25% {
-      -webkit-transform: translateY(1px);
-      transform: translateY(1px);
-    }
-  
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  }
-  
-  .bounce {
-    animation-name: bounce-animation;
-    animation-duration: 2s;
-  }
-  
-  
-  
-  /*everything below here is just setting up the page, so dont worry about it */
-  
-  
-  @media (min-width: 768px) {
-    .navbar{
-      text-align: center !important;
-      float: none;
-      display: inline-block;
-    }
-  }
-  
-  body {
-    background-color: rgba(0,0,0,1);
-    font-weight:600;
-    text-align:center !important;
-    color: white;
-  }
-  
-  nav {
-    background: none !important;
-    text-transform:uppercase;
-    li {
-      margin-left: 3em;
-      margin-right: 3em;
-      a{
-        transition: .5s color ease-in-out;
-      }
-    }
-  }
-  
-  .page-title {
-    opacity: .75 !important;
-  }
+body {
+	height: 400vh;
+}
+
+section {
+	height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	color: #222;
+	font-size: 45px;
+	font-family: 'Cabin Condensed', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&.one {
+		background-color: #55bf8f;
+	}
+
+	&.two {
+		background-color: #4c76a7;
+	}
+
+	&.three {
+		background-color: #59aca9;
+	}
+
+	&.four {
+		background-color: saturate(lighten(#c589a0, 10%), 5%);
+	}
+}
+
+button {
+	padding: 10px 30px;
+	margin-left: 20px;
+	outline: none;
+	border: 2px solid $blue;
+	background-color: #fff;
+	font-family: 'Vidaloka', sans-serif;
+	font-size: 23px;
+	transition: 500ms ease-in;
+
+	&.filled {
+		/* Animation results in better performances than transitions*/
+		animation: filled 300ms forwards;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: currentColor;
+}
+
+.nav {
+	background-color: lighten(#eee, 1%);
+	background-color: #fff;
+	width: 100vw;
+	max-width: 100%;
+	height: 100px;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.col {
+		&-2 {
+			flex: 2 0 0;
+		}
+
+		&-8 {
+			flex: 8 0 0;
+			text-align: center;
+			font-size: 37px;
+			display: flex;
+			justify-content: center;
+			font-family: 'Vidaloka', serif;
+		}
+	}
+	i {
+		margin-right: 10px;
+
+		&.move-right {
+			animation: move-right 300ms forwards;
+		}
+
+		&.move-left {
+			animation: move-left 300ms forwards;
+		}
+	}
+}
+
+.title {
+	&.fade-out {
+		animation: fade-out 300ms forwards;
+	}
+
+	&.fade-in {
+		animation: fade-in 300ms forwards;
+	}
+}
+
+@keyframes fade-out {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+		display: block;
+	}
+	to {
+		transform: translateX($fade-dist);
+		opacity: 0;
+		display: none;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		transform: translateX($fade-dist);
+		opacity: 0;
+		display: none;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+		display: block;
+	}
+}
+
+@keyframes filled {
+	from {
+		background-color: #fff;
+	}
+	to {
+		background-color: $blue;
+	}
+}
+
+@keyframes move-right {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX($move-dist);
+	}
+}
+
+@keyframes move-left {
+	from {
+		transform: translateX($move-dist);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
