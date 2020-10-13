@@ -1,61 +1,77 @@
 .dm-background {
-	background-image:
-		url("/images/jeshoots-com-pUAM5hPaCRI-unsplash.jpg");
+	background-image: url("/images/jeshoots-com-pUAM5hPaCRI-unsplash.jpg");
 	height: 100vh;
-	
+
 	background-size: cover;
 }
-.dm-containerAboutMe{
+
+.dm-containerAboutMe {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 }
-.dm-underline:after {
+.dm-aboutMe {
+	vertical-align: text-bottom;
+	padding-top: 40px;
+	position: relative;
+	top: 10px;
+}
+.dm-underline:before {
 	left: 0;
 	bottom: 0;
 	width: 140px;
 	height: 1em;
 	border-bottom: 5px solid black;
-	content: '';
+	content: "";
 	display: inline-block;
-	vertical-align: middle;
-	top:1rem;
-	border-top:none!important;
-	margin-top:0px!important;
+
+	top: 1rem;
+	border-top: none !important;
+	margin-top: 0px !important;
 }
 
-.hr{
-	border-top:none!important;
-	margin-top:0px!important;
+hr {
+	border-top: none !important;
+	margin-top: 0px !important;
+	margin-bottom: 10px;
+	height: auto;
 }
 
-p.content-text { font-size: 25px; }
+p.content-text {
+	font-size: 25px;
+}
 
 .profile-image {
 	border-radius: 50%;
 	display: block;
-	max-height:250px;
+	max-height: 250px;
 	max-width: 250px;
 	margin: 0 auto 1em;
 	width: 100%;
 	opacity: 0.85;
-  }
-.dm-containerq{
-	height:60%;
-	height:40px;
 }
-.dm-q{
-	font-size:16px;
-	width:100%;
+.dm-containerq {
+	flex-direction: column;
+	display: flex;
+}
+.dm-h3-author {
 	text-align: center;
-	position: absolute;
 }
-.dm-li{
-	font-size:14px;
+.dm-q {
+	display: block;
+	font-size: 16px;
+	width: 100%;
+	text-align: center;
 }
-@media (min-width: 1500px)
-{
-	.container, .container-lg, .container-md, .container-sm, .container-xl {
+.dm-li {
+	font-size: 14px;
+}
+@media (min-width: 1500px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl {
 		max-width: 1340px;
 	}
 }
@@ -162,30 +178,28 @@ p.content-text { font-size: 25px; }
 	transition: height 0.5s, line-height 0.5s;
 }
 
-.wrap{
-	font-size:30px!important;
-	text-align:center;
-	width:100%;
-
-
+.wrap {
+	font-size: 30px !important;
+	text-align: center;
+	width: 100%;
 }
-.author-container{
+.author-container {
 	text-align: center;
 }
-.typewrite{
-	text-align:center;
+.typewrite {
+	text-align: center;
 }
 footer {
-	margin-top: .5em;
+	margin-top: 0.5em;
 	padding: 0;
 	color: #777;
 	font-size: 12pt;
 	text-align: left;
 	font-style: italic;
-  }
- footer:before {
-	content: '— ';
-  }
+}
+footer:before {
+	content: "— ";
+}
 
 .site-title {
 	display: inline-block;
@@ -811,7 +825,7 @@ body {
 
 .affix {
 	padding: 0;
-	background-color: #111;
+	background-color: #555555;
 }
 .size {
 	font-size: 15px !important;
