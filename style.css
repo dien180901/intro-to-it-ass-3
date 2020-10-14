@@ -856,7 +856,11 @@ body {
 
 .affix {
 	padding: 0;
-	background-color: black;
+	background-color: rgb(255, 255, 255);
+	
+}
+.dm-navContainer{
+	color:grey!important;
 }
 .size {
 	font-size: 15px !important;
@@ -967,3 +971,31 @@ body {
 .card__btn:hover span, .card__btn:active span {
 	margin-left: 1.5rem;
 }
+.mt-0,
+.my-0 {
+  margin-top: 0 !important;
+}
+hr.divider {
+	max-width: 3.25rem;
+	border-width: 0.2rem;
+	border-color: #f4623a;
+  }
+  .mt-4,
+  .my-4 {
+	margin-top: 1.5rem !important;
+  }
+  .text-muted {
+	color: #6c757d !important;
+  }
+  .mb-5,
+  .my-5 {
+	margin-bottom: 3rem !important;
+  }
+	  
+  .d-block {
+	display: block !important;
+  }
+  .page-section {
+	padding: 8rem 0;
+  }
+	

@@ -9,10 +9,12 @@ $(window).scroll(function () {
 	if ($(document).scrollTop() > 50) {
 		$(".nav").addClass("affix");
 		$("a").addClass("size");
+		$("a").addClass("dm-navContainer")
 		console.log("OK");
 	} else {
 		$(".nav").removeClass("affix");
 		$("a").removeClass("size");
+		$("a").removeClass("dm-navContainer")
 	}
 });
 
