@@ -266,7 +266,9 @@ footer:before {
 .hero-section h1 {
 	color: #333;
 }
-
+.size{
+	background:grey!important;
+}
 .hero-section p {
 	color: #333;
 }
@@ -542,7 +544,7 @@ body {
 	z-index:1000;
 }
 
-.nav div.logo {
+.nav div .logo {
 	float: left;
 	width: auto;
 	height: auto;
@@ -553,8 +555,26 @@ body {
 	text-decoration: none;
 	color: #fff;
 	font-size: 2.5rem;
+	position: relative;
+	display: inline-block;
 }
-
+.nav div.logo a:after {    
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	background: #fff;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+  }
+  .nav div.logo a:hover:after { 
+	width: 100%; 
+	left: 0; 
+	text-align: center;
+  }
 .nav div.logo a:hover {
 	color: #00e676;
 }
@@ -585,8 +605,26 @@ body {
 	color: #fff;
 	line-height: 65px;
 	font-size: 2.4rem;
+	position: relative;
+	display: inline-block;
 }
-
+.nav div.main_list ul li a:after {    
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	background: #fff;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+  }
+  .nav div.main_list ul li a:hover:after { 
+	width: 100%; 
+	left: 0; 
+	text-align: center;
+  }
 .nav div.main_list ul li a:hover {
 	color: #00e676;
 }
@@ -862,9 +900,7 @@ body {
 .dm-navContainer{
 	color:grey!important;
 }
-.size {
-	font-size: 15px !important;
-}
+
 .myH2 {
 	text-align: center;
 	font-size: 4rem;
