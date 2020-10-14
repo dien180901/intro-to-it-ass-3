@@ -70,90 +70,81 @@ let data = [
 		[
 			{
 				imgUrl: "images/84E8ECAE-F994-4190-85CE-3B95F0902546_1_105_c.jpeg",
-				link: "https://jolly-borg-8082b5.netlify.app/",
-				skills: ["Boostrap", "React"],
+				link: "https://twitter-catalina.netlify.app/",
+				skills: ["BOOSTRAP", "HTML","CSS"],
+				name:"Twitter"
 			},
 			{
-				imgUrl: "images/Image 10-7-20 at 20.21.jpeg",
-				link: "https://fervent-lovelace-7d1ad6.netlify.app/",
-				skills: ["html", "css"],
+				imgUrl: "images/Image 10-14-20 at 09.33.jpeg",
+				link: "https://musing-chandrasekhar-7264e7.netlify.app/",
+				skills: ["REACT","EXPRESS","MOMENT"],
+				name:"WeatherApp"
 			},
 		],
 		[
 			{
 				imgUrl: "images/Screen Shot 2020-08-13 at 16.12.19.png",
 				link: "https://wizardly-goldberg-a91665.netlify.app/",
-				skills: ["javascript", "React"],
+				skills: ["JAVASCRIPT", "REACT"],
+				name:"Movie"
 			},
 			{
 				imgUrl: "images/Screen Shot 2020-08-13 at 16.12.58.png",
 				link: "https://dien-w3-p2.netlify.app/",
-				skills: ["html", "React"],
+				skills: ["HTML", "CSS"],
+				name:"To do List"
 			},
 		],
 	],
 ];
+function clickCard(card){
+	
+		window.open( 
+		  "https://www.geeksforgeeks.org", "_blank"); 
+	
+}
 function write(card) {
 	return `
+	
   <div class="container">
   <div class="row justify-content-center">
-    <div class="col-sm-3">
+    <div class="col-md-3">
     <div class="card-container">
-  <div class="card">
-    <div class="front">
-      <div class="container-img">
-        <img class="image" src="${card[1].imgUrl}" alt="" />
-      </div>
-      <div class="badge-container">
-      ${card[1].skills
-				.map(
-					(item) => `<span class="badge badge-danger dien-badge">${item}</span>`
-				)
-				.join("")}
-      </div>
-      
-    </div>
-    <div class="back">
-      <div class="iframe-container">
-     
-        <iframe src="${card[1].link}" class="iframe" >
-          <p>Your browser does not support iframes.</p>
-        </iframe>
-      </div>
-      
-    </div>
-  </div>
-  </div>
-    </div>
-    <div class="col-sm-2">
-     
-    </div>
-    <div class="col-sm-3">
-    <div class="card-container">
-  <div class="card">
-    <div class="front">
-      <div class="container-img">
-        <img class="image" src="${card[0].imgUrl}" alt="" />
-      </div>
-      <div class="badge-container">
+	<div class="grid__item">
+        <div class="card"><img class="card__img" src="${card[0].imgUrl}" alt="Snowy Mountains">
+            <div class="card__content">
+				<h1 class="card__header">${card[0].name}</h1>
+				<div class="badge-container">
       ${card[0].skills
 				.map(
-					(item) => `<span class="badge badge-danger dien-badge">${item}</span>`
+					(item) => `<span class="badge badge-primary dien-badge">${item}</span>`
 				)
 				.join("")}
       </div>
-      
-    </div>
-    <div class="back">
-      <div class="iframe-container">
-     
-        <iframe src="${card[0].link}" class="iframe" >
-          <p>Your browser does not support iframes.</p>
-        </iframe>
-      </div>
-      
+                <button class="card__btn"  onclick=" window.open('${card[0].link}','_blank')">Explore <span>&rarr;</span></button></div>
+        </div>
     </div>
   </div>
+    </div>
+    <div class="col-md-2">
+     
+    </div>
+    <div class="col-md-3">
+	<div class="card-container">
+	<div class="grid__item">
+        <div class="card"><img class="card__img" src="${card[1].imgUrl}" alt="Snowy Mountains">
+            <div class="card__content">
+				<h1 class="card__header">${card[1].name}</h1>
+				<div class="badge-container">
+      ${card[1].skills
+				.map(
+					(item) => `<span class="badge badge-primary dien-badge">${item}</span>`
+				)
+				.join("")}
+      </div>
+                <button class="card__btn"  onclick=" window.open('${card[1].link}','_blank')">Explore <span>&rarr;</span></button></div>
+        </div>
+    </div>
   </div>
     </div>
   </div>
