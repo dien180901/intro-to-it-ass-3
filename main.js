@@ -9,12 +9,12 @@ $(window).scroll(function () {
 	if ($(document).scrollTop() > 50) {
 		$(".nav").addClass("affix");
 		$("#dm-a :after ").addClass("size");
-		$("a").addClass("dm-navContainer")
+		$("a").addClass("dm-navContainer");
 		console.log("OK");
 	} else {
 		$(".nav").removeClass("affix");
 		$("#dm-a:after").removeClass("size");
-		$("a").removeClass("dm-navContainer")
+		$("a").removeClass("dm-navContainer");
 	}
 });
 
@@ -73,37 +73,34 @@ let data = [
 			{
 				imgUrl: "images/84E8ECAE-F994-4190-85CE-3B95F0902546_1_105_c.jpeg",
 				link: "https://twitter-catalina.netlify.app/",
-				skills: ["BOOSTRAP", "HTML","CSS"],
-				name:"Twitter"
+				skills: ["BOOSTRAP", "HTML", "CSS"],
+				name: "Twitter",
 			},
 			{
 				imgUrl: "images/Image 10-14-20 at 09.33.jpeg",
 				link: "https://musing-chandrasekhar-7264e7.netlify.app/",
-				skills: ["REACT","EXPRESS","MOMENT"],
-				name:"WeatherApp"
+				skills: ["REACT", "EXPRESS", "MOMENT"],
+				name: "WeatherApp",
 			},
 		],
 		[
 			{
 				imgUrl: "images/Screen Shot 2020-08-13 at 16.12.19.png",
-				link: "https://wizardly-goldberg-a91665.netlify.app/",
+				link: "https://clever-hodgkin-1e33c7.netlify.app/",
 				skills: ["JAVASCRIPT", "REACT"],
-				name:"Movie"
+				name: "Movie",
 			},
 			{
 				imgUrl: "images/Screen Shot 2020-08-13 at 16.12.58.png",
 				link: "https://dien-w3-p2.netlify.app/",
 				skills: ["HTML", "CSS"],
-				name:"To do List"
+				name: "To do List",
 			},
 		],
 	],
 ];
-function clickCard(card){
-	
-		window.open( 
-		  "https://www.geeksforgeeks.org", "_blank"); 
-	
+function clickCard(card) {
+	window.open("https://www.geeksforgeeks.org", "_blank");
 }
 function write(card) {
 	return `
@@ -113,17 +110,22 @@ function write(card) {
     <div class="col-md-3">
     <div class="card-container">
 	<div class="grid__item">
-        <div class="card"><img class="card__img" src="${card[0].imgUrl}" alt="Snowy Mountains">
+        <div class="card"><img class="card__img" src="${
+					card[0].imgUrl
+				}" alt="Snowy Mountains">
             <div class="card__content">
 				<h1 class="card__header">${card[0].name}</h1>
 				<div class="badge-container">
       ${card[0].skills
 				.map(
-					(item) => `<span class="badge badge-primary dien-badge">${item}</span>`
+					(item) =>
+						`<span class="badge badge-primary dien-badge">${item}</span>`
 				)
 				.join("")}
       </div>
-                <button class="card__btn"  onclick=" window.open('${card[0].link}','_blank')">Explore <span>&rarr;</span></button></div>
+                <button class="card__btn"  onclick=" window.open('${
+									card[0].link
+								}','_blank')">Explore <span>&rarr;</span></button></div>
         </div>
     </div>
   </div>
@@ -134,17 +136,22 @@ function write(card) {
     <div class="col-md-3">
 	<div class="card-container">
 	<div class="grid__item">
-        <div class="card"><img class="card__img" src="${card[1].imgUrl}" alt="Snowy Mountains">
+        <div class="card"><img class="card__img" src="${
+					card[1].imgUrl
+				}" alt="Snowy Mountains">
             <div class="card__content">
 				<h1 class="card__header">${card[1].name}</h1>
 				<div class="badge-container">
       ${card[1].skills
 				.map(
-					(item) => `<span class="badge badge-primary dien-badge">${item}</span>`
+					(item) =>
+						`<span class="badge badge-primary dien-badge">${item}</span>`
 				)
 				.join("")}
       </div>
-                <button class="card__btn"  onclick=" window.open('${card[1].link}','_blank')">Explore <span>&rarr;</span></button></div>
+                <button class="card__btn"  onclick=" window.open('${
+									card[1].link
+								}','_blank')">Explore <span>&rarr;</span></button></div>
         </div>
     </div>
   </div>
