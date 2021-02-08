@@ -519,6 +519,78 @@ p {
 		opacity: 1;
 	}
 }
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Quicksand", sans-serif;
+	font-size: 62.5%;
+	font-size: 10px;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+.nav {
+	width: 100%;
+	height: 65px;
+	position: fixed;
+	line-height: 65px;
+	text-align: center;
+}
+
+.nav div.logo {
+	float: left;
+	width: auto;
+	height: auto;
+	padding-left: 3rem;
+}
+
+.nav div.logo a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+	color: #00e676;
+}
+
+.nav div.main_list {
+	height: 65px;
+	float: right;
+}
+
+.nav div.main_list ul {
+	width: 100%;
+	height: 65px;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav div.main_list ul li {
+	width: auto;
+	height: 65px;
+	padding: 0;
+	padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+	text-decoration: none;
+	color: #fff;
+	line-height: 65px;
+	font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+	color: #00e676;
+}
+
 .home {
 	width: 100%;
 	height: 100vh;
@@ -557,19 +629,22 @@ p {
 		width: 100%;
 		height: 0;
 		overflow: hidden;
+		display: none;
 	}
 	.nav div.show_list {
 		height: auto;
-		display: none;
+		width: 100wh;
+		/* z-index: 100; */
+		display: block;
+		background-color: black;
 	}
 	.nav div.main_list ul {
 		flex-direction: column;
 		width: 100%;
-		height: 100vh;
+		height: auto;
 		right: 0;
 		left: 0;
 		bottom: 0;
-		background-color: #111;
 		/*same background color of navbar*/
 		background-position: center top;
 	}
@@ -585,6 +660,14 @@ p {
 	}
 	.nav div.media_button {
 		display: block;
+	}
+	.dm-navTrigger {
+		width: 30px;
+		height: 25px;
+	}
+	.dm-logo-container {
+		display: flex;
+		flex-direction: row;
 	}
 }
 
