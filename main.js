@@ -8,11 +8,14 @@ $(".navTrigger").click(function () {
 $(window).scroll(function () {
 	if ($(document).scrollTop() > 50) {
 		$(".nav").addClass("affix");
+		$(".nav a").addClass("affix2");
 		$("#dm-a :after ").addClass("size");
 		$("a").addClass("dm-navContainer");
+
 		console.log("OK");
 	} else {
 		$(".nav").removeClass("affix");
+		$(".nav a").removeClass("affix2");
 		$("#dm-a:after").removeClass("size");
 		$("a").removeClass("dm-navContainer");
 	}
