@@ -585,7 +585,7 @@ body {
 .nav div.main_list ul li a {
     text-decoration: none;
     line-height: 65px;
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
@@ -1039,7 +1039,7 @@ hr.divider {
 
 .nav-home {
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 .nav-brand-i-logo {
