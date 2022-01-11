@@ -1,7 +1,52 @@
 .dm-background {
-    background-image: url("/images/jeshoots-com-pUAM5hPaCRI-unsplash.jpg");
+    background-image: url("https://preview.colorlib.com/theme/readit/images/xbg_1.jpg.pagespeed.ic.N8Wtgh_Hsu.webp");
     height: 100vh;
     background-size: cover;
+    /* background-position: 50% 50%; */
+}
+
+.dm-over {
+    opacity: 0.8;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    right: 0;
+    background: #f200ff;
+    background: -moz-linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+    background: -webkit-gradient( left bottom, right top, color-stop(0%, #f200ff), color-stop(100%, #ffba42));
+    background: -webkit-linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+    background: -o-linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+    background: -ms-linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+    background: linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+}
+
+.dm-h1-background-homepage {
+    color: white;
+    font-size: 10rem;
+    position: absolute;
+    left: 15%;
+    top: 27%;
+    font-weight: 900;
+}
+
+.dm-h1-background-homepage-h6-2 {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    color: white;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.dm-h1-background-homepage-h6 {
+    position: absolute;
+    left: 10%;
+    top: 23%;
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
 }
 
 .dm-containerAboutMe {
@@ -82,9 +127,11 @@ p.content-text {
     }
 }
 
+
 /* .footer-h5 {
     font-size: 15px;
 } */
+
 
 /* .introduction-footer {
     flex-direction: column;
@@ -123,6 +170,7 @@ p.content-text {
     text-align: center;
     padding-top: 30px;
 }
+
 
 /* .footer {
     color: white;
@@ -248,6 +296,7 @@ p.content-text {
     text-align: center;
 }
 
+
 /* footer {
     margin-top: 0.5em;
     padding: 0;
@@ -256,6 +305,7 @@ p.content-text {
     text-align: left;
     font-style: italic;
 } */
+
 
 /* footer:before {
     content: "— ";
@@ -315,6 +365,7 @@ p.content-text {
     background-color: #161313;
     color: white;
 }
+
 
 /* footer {
     height: 200px;
@@ -1055,7 +1106,9 @@ hr.divider {
     color: #a3b86c;
 }
 
+
 /*--- Footer ---*/
+
 .footer-wrap {
     background: #f8fafc;
     border-top: 1px solid #e0e4f6;
@@ -1136,10 +1189,10 @@ hr.divider {
     position: relative;
 }
 
-.f-subscribe-form input[type=text] {
+.f-subscribe-form input[type="text"] {
     border: 1px solid #e0e4f6;
     color: #373d54;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     margin-top: 0;
     outline: none;
@@ -1149,20 +1202,20 @@ hr.divider {
     transition: all 0.2s;
 }
 
-.f-subscribe-form input[type=text]:focus {
+.f-subscribe-form input[type="text"]:focus {
     border-color: #d1d5e5;
 }
 
-.f-subscribe-form input[type=text]::-webkit-input-placeholder {
+.f-subscribe-form input[type="text"]::-webkit-input-placeholder {
     color: #c7cbdc;
 }
 
-.f-subscribe-form input[type=text]::-moz-placeholder {
+.f-subscribe-form input[type="text"]::-moz-placeholder {
     color: #c7cbdc;
     opacity: 1;
 }
 
-.f-subscribe-form input[type=text]:-ms-input-placeholder {
+.f-subscribe-form input[type="text"]:-ms-input-placeholder {
     color: #c7cbdc;
 }
 
@@ -1254,23 +1307,23 @@ hr.divider {
 }
 
 .social-icons .fa-facebook:hover {
-    background: #0083C9;
+    background: #0083c9;
 }
 
 .social-icons .fa-twitter:hover {
-    background: #5BBCEC;
+    background: #5bbcec;
 }
 
 .social-icons .fa-linkedin:hover {
-    background: #FF4518;
+    background: #ff4518;
 }
 
 .social-icons .fa-dribbble:hover {
-    background: #90C9DC;
+    background: #90c9dc;
 }
 
 .social-icons .fa-google-plus:hover {
-    background: #CE3C2D;
+    background: #ce3c2d;
 }
 
 .social-icons .fa-instagram:hover {
@@ -1281,27 +1334,20 @@ hr.divider {
     background: #4c75a3;
 }
 
-@media only screen and (max-width : 768px) {
-
-    
+@media only screen and (max-width: 768px) {
     .f-menu-list .f-menu {
         width: 25%;
     }
-
     .f-subscribe {
         float: none;
         clear: both;
         max-width: 400px;
         width: 100%;
     }
-
     .f-block-modal-wrap .f-block-modal.f-block-modal-map {
         width: 420px;
     }
-
     .f-block-modal.f-block-modal-map .allstore-gmap {
         width: 420px;
     }
-
-    
 }
