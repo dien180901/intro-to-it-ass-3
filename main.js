@@ -4,7 +4,11 @@ $(".navTrigger").click(function () {
 	$("#mainListDiv").toggleClass("show_list");
 	$("#mainListDiv").fadeIn();
 });
-
+console.log("c")
+$(".our-team").hover(()=>{
+	console.log("b")
+	$(".our-team .picture").attr('data-after','');
+})
 $(window).scroll(function () {
 	if ($(document).scrollTop() > 50) {
 		$(".nav").addClass("affix");

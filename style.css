@@ -1449,12 +1449,13 @@ hr.divider {
     color: black;
 }
 .our-team {
-  padding: 30px 0 40px;
+  padding: 30px 0 60px;
   margin-bottom: 30px;
-  background-color: #f7f5ec;
+  background-color: white;
   text-align: center;
   overflow: hidden;
   position: relative;
+
 }
 
 .our-team .picture {
@@ -1486,7 +1487,7 @@ hr.divider {
 }
 
 .our-team .picture::after {
-  content: "";
+   
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -1499,15 +1500,19 @@ hr.divider {
 
 .our-team .picture img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 50%;
   transform: scale(1);
   transition: all 0.9s ease 0s;
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .our-team:hover .picture img {
   box-shadow: 0 0 0 14px #f7f5ec;
   transform: scale(0.7);
+  
 }
 
 .our-team .title {
@@ -1521,15 +1526,15 @@ hr.divider {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #1369ce;
+  /* background-color: #1369ce; */
   position: absolute;
-  bottom: -100px;
+  bottom: -120px;
   left: 0;
   transition: all 0.5s ease 0s;
 }
 
 .our-team:hover .social {
-  bottom: 0;
+  bottom: 20px;
 }
 
 .our-team .social li {
@@ -1555,6 +1560,7 @@ hr.divider {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background: #f8f8f8;
 }
 .dm-aboutus-section-p{
     color:black;
@@ -1564,4 +1570,33 @@ hr.divider {
 }
 .dm-career-path span {
 	background-image: none;
+}
+a.dm-main-button {
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 12px 20px;
+    
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.25px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    border:1px solid #4b8ef1;
+    color:#4b8ef1;
+    background:white;
+}
+a.dm-main-button:hover{
+    background: linear-gradient(
+105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
+color:white;
+}
+a{
+    text-decoration: none!important;
+}
+.dm-content-image-card{
+    width:100%;
+   
+    
 }
